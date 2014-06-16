@@ -69,6 +69,21 @@ class ContactListener
     }
 
     /**
+<<<<<<< HEAD:src/OroCRM/Bundle/MagentoBundle/EventListener/ContactListener.php
+=======
+     * @return array
+     */
+    public function getSubscribedEvents()
+    {
+        return [
+            // @codingStandardsIgnoreStart
+            Events::onFlush
+            // @codingStandardsIgnoreEnd
+        ];
+    }
+
+    /**
+>>>>>>> origin/1.2:src/OroCRM/Bundle/MagentoBundle/EventListener/ContactSubscriber.php
      * {@inheritdoc}
      */
     public function onFlush(OnFlushEventArgs $event)

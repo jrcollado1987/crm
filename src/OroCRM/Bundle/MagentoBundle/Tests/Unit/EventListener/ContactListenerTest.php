@@ -80,6 +80,17 @@ class ContactListenerTest extends \PHPUnit_Framework_TestCase
         $this->postFlushEventArgs = new PostFlushEventArgs($this->em);
     }
 
+<<<<<<< HEAD:src/OroCRM/Bundle/MagentoBundle/Tests/Unit/EventListener/ContactListenerTest.php
+=======
+    public function testGetSubscribedEvents()
+    {
+        $this->assertEquals(
+            ['onFlush'],
+            $this->subscriber->getSubscribedEvents()
+        );
+    }
+
+>>>>>>> origin/1.2:src/OroCRM/Bundle/MagentoBundle/Tests/Unit/EventListener/ContactSubscriberTest.php
     /**
      * @dataProvider dataTest
      *
@@ -166,7 +177,11 @@ class ContactListenerTest extends \PHPUnit_Framework_TestCase
                 ->method('schedule');
         }
 
+<<<<<<< HEAD:src/OroCRM/Bundle/MagentoBundle/Tests/Unit/EventListener/ContactListenerTest.php
         $this->listener->onFlush($this->onFlushEventArgs);
+=======
+        $this->subscriber->onFlush($this->onFlushEventArgs);
+>>>>>>> origin/1.2:src/OroCRM/Bundle/MagentoBundle/Tests/Unit/EventListener/ContactSubscriberTest.php
     }
 
     public function dataTest()
